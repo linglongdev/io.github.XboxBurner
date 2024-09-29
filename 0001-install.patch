@@ -1,0 +1,30 @@
+From 086b1d8c592b9d1af983de4b1567239e49f84cc2 Mon Sep 17 00:00:00 2001
+From: wjyrich <1071633242@qq.com>
+Date: Thu, 12 Sep 2024 13:57:50 +0800
+Subject: [PATCH] install
+
+---
+ XBoxBurner.pro | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/XBoxBurner.pro b/XBoxBurner.pro
+index bf9e6d5..4ecaee0 100644
+--- a/XBoxBurner.pro
++++ b/XBoxBurner.pro
+@@ -85,10 +85,10 @@ FORMS     += resources/ui/xboxburner.ui
+ RESOURCES += resources/xboxburner.qrc
+ 
+ linux-g++ {
+-  target.path    = /usr/bin
+-  icon.path     += /usr/share/pixmaps
++  target.path    = $$PREFIX/bin
++  icon.path     += $$PREFIX/share/icons/hicolor/apps/
+   icon.files    += resources/images/XBoxBurner.png
+-  desktop.path  += /usr/share/applications
++  desktop.path  += $$PREFIX/share/applications
+   desktop.files += resources/XBoxBurner.desktop
+   INSTALLS      += target icon desktop
+ }
+-- 
+2.43.4
+
